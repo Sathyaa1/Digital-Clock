@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #0d00ff;
+}
+#time 
+{
+	display: flex;
+	gap: 40px;
+}
+
+#time .circle
+{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#time .circle svg 
+{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transform: rotate(270deg);
+}
+#time .circle svg circle 
+{
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	stroke-width: 4;
+	stroke-linecap: round;
+	stroke: #191919;
+	transform: translate(5px,5px);
+}
+#time .circle svg circle:nth-child(2)
+{
+	stroke: var(--clr);
+	stroke-dasharray: 440;
+}
+
+#time div 
+{
+	position: absolute;
+	text-align: center;
+	font-weight: 500;
+	color: #fff;
+	font-size: 1.5em;
+}
+#time div span 
+{
+	position: absolute;
+	transform: translateX(-50%) translateY(-10px);
+	font-size: 0.35em;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+#time .ap 
+{
+	position: relative;
+	font-size: 1em;
+	transform: translateX(-20px);
+}
+
+
+.dots 
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	z-index: 10;
+}
+.dots::before 
+{
+	content: '';
+	position: absolute;
+	top: -3px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: var(--clr);
+	box-shadow: 0 0 20px var(--clr),
+	0 0 60px var(--clr);
+}
+
+
+.title{
+    /* background-color: #FFD700; */
+    position: absolute;
+    
+    right:  2%;
+    margin: 25px;
+    display: inline-block;
+    height: 300px;
+    width: 40%;
+    text-align: right;
+    }
+    .title-h2{
+        margin-top: 40px;
+      font-size: 4rem;
+      font-family: 'Passions Conflict', cursive;
+      color: #ffffff;
+      animation: mymove 3s infinite;
+      animation-direction: alternate;
+    }
+    
+    @keyframes mymove {
+     0%   { left: 0px; top: 0px;}
+     50%  { left: 100px; top: 0px;}
+     100% { left: 0px; top: 0px;}
+    }
+    .img{
+      height: 200px;
+      position: absolute;
+      right: 30%;
+      padding-bottom: 3%;
+      border-radius: 20%;
+      animation: 5s infinite;
+    }
+    @keyframes fadeimage {
+      0%{
+        opacity: 0.1;
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0.1;
+      }
+    }
+    
+    .overlay {
+    position: absolute;
+        margin-top: 250px;
+      bottom: 0.5%;
+      width: 70%;
+      transition: .5s ease;
+      opacity:0;
+      color: #FAF4FF;
+      font-size: 12px;
+      padding-left: 215px;
+      text-align: center;
+    }
+    
+    .title:hover .overlay {
+      opacity: 1;
+    }
+    
